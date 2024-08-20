@@ -108,11 +108,7 @@ module.exports = () => ({
     client: 'postgres',
     connection: {
       host: 'pg-318856b7-lfreturnme-d0fa.i.aivencloud.com',
-<<<<<<< HEAD
-      port: '10436',
-=======
       port: 10436,
->>>>>>> 12b5f63d209c3d187126ce43a2e2165a2f355153
       database: 'defaultdb',
       user: 'avnadmin',
       password: 'AVNS_TBmFda3jjh6jSVH5Zal',
