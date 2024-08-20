@@ -103,17 +103,15 @@
 //   };
 // };
 
-
-
 module.exports = () => ({
   connection: {
     client: 'postgres',
     connection: {
-      host: process.env.REACT_APP_DATABASE_HOST,
-      port: process.env.REACT_APP_DATABASE_PORT,
-      database: process.env.REACT_APP_DATABASE_NAME,
-      user: process.env.REACT_APP_DATABASE_USER,
-      password: process.env.REACT_APP_DATABASE_PASSWORD,
+      host: 'pg-318856b7-lfreturnme-d0fa.i.aivencloud.com',
+      port: 10436,
+      database: 'defaultdb',
+      user: 'avnadmin',
+      password: 'AVNS_TBmFda3jjh6jSVH5Zal',
       ssl: {
         rejectUnauthorized: false,
       },
@@ -121,4 +119,3 @@ module.exports = () => ({
     debug: false,
   },
 });
-
