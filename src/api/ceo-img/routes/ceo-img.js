@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * hero-video router
+ * ceo-img router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::hero-video.hero-video');
+module.exports = createCoreRouter('api::ceo-img.ceo-img');

@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * hero-video controller
+ * ceo-img controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::hero-video.hero-video');
+module.exports = createCoreController('api::ceo-img.ceo-img');

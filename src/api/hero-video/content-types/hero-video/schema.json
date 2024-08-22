@@ -1,10 +1,11 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "hero_videos",
   "info": {
     "singularName": "hero-video",
     "pluralName": "hero-videos",
-    "displayName": "hero_video"
+    "displayName": "hero_video",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,12 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "heroVideo": {
-      "allowedTypes": [
-        "videos"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "videos"
+      ]
     }
   }
 }

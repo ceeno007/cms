@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * hero-video service
+ * ceo-img service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::hero-video.hero-video');
+module.exports = createCoreService('api::ceo-img.ceo-img');
