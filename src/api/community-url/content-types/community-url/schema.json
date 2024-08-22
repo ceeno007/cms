@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "community_urls",
+  "info": {
+    "singularName": "community-url",
+    "pluralName": "community-urls",
+    "displayName": "communityUrl",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}

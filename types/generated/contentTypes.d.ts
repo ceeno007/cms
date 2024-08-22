@@ -842,6 +842,37 @@ export interface ApiCeoImgCeoImg extends Schema.SingleType {
   };
 }
 
+export interface ApiCommunityUrlCommunityUrl extends Schema.SingleType {
+  collectionName: 'community_urls';
+  info: {
+    singularName: 'community-url';
+    pluralName: 'community-urls';
+    displayName: 'communityUrl';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    url: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::community-url.community-url',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::community-url.community-url',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -1055,6 +1086,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::blog.blog': ApiBlogBlog;
       'api::ceo-img.ceo-img': ApiCeoImgCeoImg;
+      'api::community-url.community-url': ApiCommunityUrlCommunityUrl;
       'api::event.event': ApiEventEvent;
       'api::home-video.home-video': ApiHomeVideoHomeVideo;
       'api::partner.partner': ApiPartnerPartner;
