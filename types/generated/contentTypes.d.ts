@@ -884,30 +884,29 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
-export interface ApiHeroVideoHeroVideo extends Schema.SingleType {
-  collectionName: 'hero_videos';
+export interface ApiHomeVideoHomeVideo extends Schema.SingleType {
+  collectionName: 'home_videos';
   info: {
-    singularName: 'hero-video';
-    pluralName: 'hero-videos';
-    displayName: 'hero_video';
-    description: '';
+    singularName: 'home-video';
+    pluralName: 'home-videos';
+    displayName: 'HomeVideo';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    heroVideo: Attribute.Media<'videos', true> & Attribute.Required;
+    video: Attribute.Media<'videos'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::hero-video.hero-video',
+      'api::home-video.home-video',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::hero-video.hero-video',
+      'api::home-video.home-video',
       'oneToOne',
       'admin::user'
     > &
@@ -1006,6 +1005,12 @@ export interface ApiTestimonyTestimony extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    role: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1051,7 +1056,7 @@ declare module '@strapi/types' {
       'api::blog.blog': ApiBlogBlog;
       'api::ceo-img.ceo-img': ApiCeoImgCeoImg;
       'api::event.event': ApiEventEvent;
-      'api::hero-video.hero-video': ApiHeroVideoHeroVideo;
+      'api::home-video.home-video': ApiHomeVideoHomeVideo;
       'api::partner.partner': ApiPartnerPartner;
       'api::team.team': ApiTeamTeam;
       'api::testimony.testimony': ApiTestimonyTestimony;
