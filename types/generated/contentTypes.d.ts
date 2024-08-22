@@ -847,7 +847,7 @@ export interface ApiCommunityUrlCommunityUrl extends Schema.SingleType {
   info: {
     singularName: 'community-url';
     pluralName: 'community-urls';
-    displayName: 'communityUrl';
+    displayName: 'community';
     description: '';
   };
   options: {
@@ -855,6 +855,7 @@ export interface ApiCommunityUrlCommunityUrl extends Schema.SingleType {
   };
   attributes: {
     url: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
