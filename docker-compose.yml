@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  strapi:
+    build: .
+    ports:
+      - "1337:1337"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - NODE_ENV=development
